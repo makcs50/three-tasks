@@ -1,0 +1,66 @@
+
+<html>
+<head>
+  <title>интукод</title>
+</head>
+<body>
+  <div id="main">
+      <ul id="list">
+          <li>html</li>
+          <li>css</li>
+      </ul>
+  </div>
+    <div id="copyright">(c) INTOCODE</div>
+    <script> 
+        const one = () => {
+
+            const div = document.getElementById('main');
+            const header = document.createElement('h1');
+            header.textContent = 'Работа с DOM'
+        return document.body.insertBefore(header, div)
+         }
+
+        //  console.log(one())
+
+        const two = () => {
+
+            const div = document.getElementById('main');
+            const a = document.createElement('a');
+            a.href = 'https://paper.dropbox.com/doc/DOM-KrSbmrOQHo09BZwgsOmhp';
+            a.textContent = 'dom'
+            div.appendChild(a)
+            return document.body.appendChild(div)
+          
+
+        }
+        // console.log(two())
+
+        const three = (color) => {
+           const newColor = document.body.style.backgroundColor = color;
+           document.body.style.color = 'white';
+            return document.body.append(newColor)
+        }
+        // console.log(three("green"))
+
+        const four = (text) => {
+            const ul = document.getElementById('list');
+            const li = document.createElement('li');
+            li.textContent = text;
+            ul.append(li)
+        }
+
+        // console.log(four('pal'))
+
+        const five = () =>{
+            const div = document.getElementById('copyright');
+            return div.remove()
+        }
+        console.log(five())
+
+
+
+
+
+    </script>
+</body>
+</html>
